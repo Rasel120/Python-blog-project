@@ -1,1 +1,1 @@
-# Python-blog-project
+# Python blog project
