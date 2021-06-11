@@ -1,0 +1,63 @@
+{% block header %}
+    {% include  'header.html' %}
+{% endblock header %}
+
+{% load static %}
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Login</h2>
+          <ol>
+            <li><a href="{% url 'home' %}" target="_blank" >Home</a></li>
+            <li>Login</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="row mt-5 justify-content-center" data-aos="fade-up">
+          <div class="col-lg-10">  
+            <form action="" method="post" role="form" >
+              {% csrf_token %}
+              <div class="form-group mt-3">
+                <div class="col-md-6 form-group">
+
+                  {% include 'message.html' %}
+                  
+                    <label class="info-title">Name</label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="User Name" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">                  
+                <div class="col-md-6 form-group">
+                    <label class="info-title">Password</label>
+                    <input type="Password" name="Password" class="form-control" id="Password" placeholder="Password" required>
+                </div>                  
+              </div>
+              <div class="form-group mt-3">
+                  <a href="{% url 'forgotpass' %}">Forgot password ? </a>
+                  <a href="{% url 'registration' %}" class="btn btn-block mt-sm">Register</a>
+              </div>
+              <div class="form-group mt-3">  
+                <div class="col-md-6 form-group">
+                    <button type="submit" class="btn btn-success">Login</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+  
+{% block footer %}
+    {% include  'footer.html' %}
+{% endblock footer %}
