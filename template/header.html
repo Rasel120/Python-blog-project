@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Company Bootstrap Template</title>
+  <title>Demo Blog</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -44,23 +44,17 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
       <!-- Normal linking system -->
-      <h1 class="logo me-auto"><a href="{% url 'home' %}"><span>Com</span>pany</a></h1>
+      <h1 class="logo me-auto"><a href="{% url 'blog' %}"><span>Blog</span> Demo</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-       <!-- <a href="{% url 'home' %}" class="logo me-auto me-lg-0"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a> -->
+       <!-- <a href="{% url 'blog' %}" class="logo me-auto me-lg-0"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a> -->
 
       <nav id="navbar" class="navbar order-last order-lg-0">        
         <ul>
           <!-- Active rakhar jonno  -->
-          {% url 'home' as url %}
-          <li><a href="{{ url }}"{% if request.path == url %} class="active"{% endif %}>Home</a></li>
-          {% url 'about' as url %}
-          <li><a href="{{ url }}"{% if request.path == url %} class="active"{% endif %}>About</a></li>
-          {% url 'services' as url %}
-          <li><a href="{{ url }}"{% if request.path == url %} class="active"{% endif %}>Services</a></li>
-          {% url 'portfolio' as url %}
-          <li><a href="{{ url }}"{% if request.path == url %} class="active"{% endif %}>Portfolio</a></li>
           {% url 'blog' as url %}
           <li><a href="{{ url }}"{% if request.path == url %} class="active"{% endif %}>Blog</a></li>
+          {% url 'about' as url %}
+          <li><a href="{{ url }}"{% if request.path == url %} class="active"{% endif %}>About</a></li>
           {% url 'contact' as url %}
           <li><a href="{{ url }}"{% if request.path == url %} class="active"{% endif %}>Contact</a></li> 
           {% url 'login' as url %} 

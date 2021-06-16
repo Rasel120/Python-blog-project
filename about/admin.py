@@ -4,3 +4,4 @@ from .models import about_mod
 # Register your models here.
 
 admin.site.register(about_mod)
+# admin.site.register(our_team)

@@ -10,3 +10,5 @@ def aboutdata(request):
 		'abou_all':ab_data	
 	}
 	return render(request,'about.html', contex)
+
+# def ourteam(request):

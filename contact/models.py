@@ -1,17 +1,6 @@
 from django.db import models
 
-
 # Create your models here.
-
-class sliders(models.Model):
-    title = models.CharField(max_length=30, blank=False)
-    description = models.TextField(max_length=300, blank=False)
-    image = models.ImageField(upload_to='image/', blank=False)
-
-    # name anar jonno __str__(self)
-    def __str__(self): 
-    	return self.title
-
 
 class contact(models.Model):
 	"""docstring for contact_query"""
@@ -35,3 +24,4 @@ class information(models.Model):
 
 	def __str__(self):
 		return self.location
+	
